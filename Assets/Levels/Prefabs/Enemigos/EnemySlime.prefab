@@ -233,8 +233,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  leftPoint: {fileID: 0}
-  rightPoint: {fileID: 0}
+  leftPoint: {fileID: 6661070870245020535}
+  rightPoint: {fileID: 862568117257108610}
   movingRight: 1
   moveTime: 3.75
   waitTime: 1
