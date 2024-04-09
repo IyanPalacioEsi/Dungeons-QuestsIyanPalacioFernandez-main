@@ -7,7 +7,7 @@ public class Platform : MonoBehaviour
     //Referenciamos el collider de la plataforma
     Collider2D _platformCollider;
     //Variable que nos permite usar bajar de la plataforma si estamos sobre ella
-    bool _onPlatform = false;
+    public bool _onPlatform = false;
 
     // Start is called before the first frame update
     void Start()
