@@ -189,7 +189,7 @@ MonoBehaviour:
   points:
   - {fileID: 7035230200650371905}
   - {fileID: 4206932668569869679}
-  moveSpeed: 5
+  moveSpeed: 7
   currentPoint: 0
   distanceToAttackPlayer: 7
   chaseSpeed: 5
