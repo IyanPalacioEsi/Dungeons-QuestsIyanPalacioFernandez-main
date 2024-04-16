@@ -144,8 +144,9 @@ public class PlayerController : MonoBehaviour
         _anim.SetTrigger("Hurt");
     }
 
-    //M�todo para que el jugador rebote
-    public void Bounce()
+   
+    //Método para que el jugador rebote
+    public void Bounce(float bounceForce)
     {
         //Impulsamos al jugador rebotando
         _theRB.velocity = new Vector2(_theRB.velocity.x, bounceForce);

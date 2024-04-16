@@ -75,8 +75,8 @@ GameObject:
   - component: {fileID: 611849041073823251}
   - component: {fileID: 5400300361309488574}
   - component: {fileID: 2208653377152498600}
-  - component: {fileID: 5159540378658327173}
   - component: {fileID: 5457612524900587849}
+  - component: {fileID: 4897094678067970775}
   m_Layer: 0
   m_Name: EnemySlime
   m_TagString: Untagged
@@ -207,19 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131ece619d0174b47b7a4ba3ce64ad41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5159540378658327173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5354129659574449548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 685560c1f894806479619d62011c9008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1225309178902297599, guid: 038710ea315f97042b8c203e9206e815, type: 3}
 --- !u!114 &5457612524900587849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +225,21 @@ MonoBehaviour:
   movingRight: 1
   moveTime: 3.75
   waitTime: 1
+--- !u!114 &4897094678067970775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5354129659574449548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed421ace9ea014f40a9cae3ff115b956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 3
+  deathEffect: {fileID: 1225309178902297599, guid: 038710ea315f97042b8c203e9206e815, type: 3}
 --- !u!1 &8639751980532702293
 GameObject:
   m_ObjectHideFlags: 0

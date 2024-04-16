@@ -66,7 +66,6 @@ public class Switch : MonoBehaviour
             collision.GetComponent<PlayerController>().canInteract = true;
         }
     }
-
     //M�todo para conocer cuando un objeto sale de la zona del interruptor
     private void OnTriggerExit2D(Collider2D collision)
     {

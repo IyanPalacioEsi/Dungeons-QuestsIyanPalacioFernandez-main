@@ -12,9 +12,10 @@ public class Stompbox : MonoBehaviour
             //Mensaje para saber si hemos pisado al enemigo
             //Debug.Log("Hit Enemy");
             //Llamamos al método que elimina al enemigo ya que podemos acceder a sus propiedades a través de su Collider
-            collision.gameObject.GetComponentInParent<EnemyDeath>().EnemyDeathController();
+            //collision.gameObject.GetComponentInParent<EnemyDeath>().EnemyDeathController();
+            collision.gameObject.GetComponentInParent<EnemyHealth>().TakeDamage();
             //Llamamos al método que hace rebotar al jugador que está en el objeto padre
-            GetComponentInParent<PlayerController>().Bounce();
+            GetComponentInParent<PlayerController>().Bounce(GetComponentInParent<PlayerController>().bounceForce);
         }
     }
 }

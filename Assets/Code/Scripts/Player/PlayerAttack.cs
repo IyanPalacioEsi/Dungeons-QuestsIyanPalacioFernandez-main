@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    //Para cambiar la tecl con la que atacaremos
-    public KeyCode attackKey = KeyCode.Q;
+    
 
     //Referencia al Animator
     public Animator anim;
@@ -22,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         //Si pulsamos la tecla de atacar asignada...
-        if(Input.GetKeyDown(attackKey) == true)
+        if (Input.GetMouseButtonDown(0))
         {
             //Activa el parametro de tipo trigger que usamos para pasar
             //a la animacion de atacar

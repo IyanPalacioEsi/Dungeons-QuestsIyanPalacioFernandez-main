@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 8164030519346356409}
   - component: {fileID: 3709355844844808542}
   - component: {fileID: 8580759199226875636}
-  - component: {fileID: 339358274893060572}
   - component: {fileID: 4794930946508226561}
   - component: {fileID: 2638771713708226642}
+  - component: {fileID: 8376916369104263531}
   m_Layer: 0
   m_Name: Halcon lobo
   m_TagString: Untagged
@@ -117,19 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131ece619d0174b47b7a4ba3ce64ad41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &339358274893060572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3321296057895699127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 685560c1f894806479619d62011c9008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1225309178902297599, guid: 038710ea315f97042b8c203e9206e815, type: 3}
 --- !u!95 &4794930946508226561
 Animator:
   serializedVersion: 5
@@ -171,6 +158,21 @@ MonoBehaviour:
   distanceToAttackPlayer: 7
   chaseSpeed: 5
   waitAfterAttack: 2
+--- !u!114 &8376916369104263531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3321296057895699127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed421ace9ea014f40a9cae3ff115b956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 3
+  deathEffect: {fileID: 1225309178902297599, guid: 038710ea315f97042b8c203e9206e815, type: 3}
 --- !u!1 &5016084703691058649
 GameObject:
   m_ObjectHideFlags: 0
