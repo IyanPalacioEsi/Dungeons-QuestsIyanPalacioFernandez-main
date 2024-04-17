@@ -40,6 +40,7 @@ public class Switch : MonoBehaviour
                 objetToSwitch.GetComponent<ObjectActivator>().ActivateObjet();
                 //Activamos el objeto
                 objetToSwitch.GetComponent<ObjectActivator>().isActive = true;
+                _sR.sprite = upSprite;
             }
 
             //Si el objeto si estaba activado
@@ -49,6 +50,7 @@ public class Switch : MonoBehaviour
                 objetToSwitch.GetComponent<ObjectActivator>().DeactivateObjet();
                 //Desactivamos el objeto
                 objetToSwitch.GetComponent<ObjectActivator>().isActive = false;
+                _sR.sprite = downSprite;
             }
                 
         }
