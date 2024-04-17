@@ -149,7 +149,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5400300361309488574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
+  m_Offset: {x: 0.014156342, y: -0.3678617}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -193,7 +193,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 1.7548294, y: 1.7642766}
   m_EdgeRadius: 0
 --- !u!114 &2208653377152498600
 MonoBehaviour:
@@ -240,6 +240,7 @@ MonoBehaviour:
   maxHealth: 1
   currentHealth: 3
   deathEffect: {fileID: 1225309178902297599, guid: 038710ea315f97042b8c203e9206e815, type: 3}
+  knockBackForce: 11
 --- !u!1 &8639751980532702293
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +358,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.37753808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -368,5 +369,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.75, y: 4}
+  m_Size: {x: 1.7739563, y: 1.7550762}
   m_EdgeRadius: 0

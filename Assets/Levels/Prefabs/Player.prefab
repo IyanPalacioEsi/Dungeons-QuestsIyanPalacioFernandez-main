@@ -226,7 +226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b764cd0248d9e6148a3b77479606e8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackKey: 113
   anim: {fileID: 3853818495169609570}
 --- !u!1 &3755770065506650049
 GameObject:
@@ -239,7 +238,6 @@ GameObject:
   - component: {fileID: 3632903675502191040}
   - component: {fileID: 835078841055680162}
   - component: {fileID: 2871973237094084702}
-  - component: {fileID: 7106561184206895843}
   m_Layer: 0
   m_Name: Stompbox
   m_TagString: Untagged
@@ -319,18 +317,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7106561184206895843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3755770065506650049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db78aeebd7f1d74197966d8e7737bf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5388357986822555530
 GameObject:
   m_ObjectHideFlags: 0

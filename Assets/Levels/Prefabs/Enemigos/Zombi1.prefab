@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 5146889073815135716}
   - component: {fileID: 5475807093465093662}
   - component: {fileID: 7930495430812241323}
+  - component: {fileID: 5910142174469330913}
   m_Layer: 0
   m_Name: Zombi1
   m_TagString: Untagged
@@ -334,3 +335,31 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 3
   deathEffect: {fileID: 1225309178902297599, guid: 038710ea315f97042b8c203e9206e815, type: 3}
+  knockBackForce: 11
+--- !u!50 &5910142174469330913
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8817425012390184500}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

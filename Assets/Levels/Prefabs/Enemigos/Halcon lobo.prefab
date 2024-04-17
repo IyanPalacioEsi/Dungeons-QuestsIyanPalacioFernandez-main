@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4794930946508226561}
   - component: {fileID: 2638771713708226642}
   - component: {fileID: 8376916369104263531}
+  - component: {fileID: 3373214189221214666}
   m_Layer: 0
   m_Name: Halcon lobo
   m_TagString: Untagged
@@ -173,6 +174,34 @@ MonoBehaviour:
   maxHealth: 1
   currentHealth: 3
   deathEffect: {fileID: 1225309178902297599, guid: 038710ea315f97042b8c203e9206e815, type: 3}
+  knockBackForce: 11
+--- !u!50 &3373214189221214666
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3321296057895699127}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &5016084703691058649
 GameObject:
   m_ObjectHideFlags: 0
