@@ -38,9 +38,29 @@ public class PlayerController : MonoBehaviour
     //Referencia al SpriteRenderer del jugador
     private SpriteRenderer _theSR;
 
+    //Sprite de diálogo del jugador
+    public Sprite thePlayerSprite;
+    //Para controlar si el jugador puede moverse o no
+    public bool canMove = true;
+
     public float bounceForce;
 
+    //Hacemos una referencia (Singleton)
+    public static PlayerController instance;
 
+    private void Awake()
+    {
+        //Inicializamos el Singleton si está vacío
+        if (instance == null) instance = this;
+        //Si no lo está
+        else
+        {
+            //Si hay otro objeto que no sea este, es destruido (evitamos la duplicación del jugador en el cambio entre escenas)
+            if (instance != this) Destroy(gameObject);
+        }
+        //Hace que el jugador no se destruido al cambiar entre escenas
+        DontDestroyOnLoad(gameObject);
+    }
     // Start is called before the first frame update
     void Start()
     {
