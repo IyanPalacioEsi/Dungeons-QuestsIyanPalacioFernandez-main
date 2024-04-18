@@ -191,6 +191,10 @@ MonoBehaviour:
   - {fileID: 4206932668569869679}
   moveSpeed: 9
   currentPoint: 0
+  HalconLobo: 0
+  Cocatriz: 1
+  Fantasma: 0
+  Zombi1: 0
   distanceToAttackPlayer: 7
   chaseSpeed: 5
   waitAfterAttack: 2

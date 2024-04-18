@@ -43,7 +43,7 @@ public class DialogManager : MonoBehaviour
         if (dialogBox.activeInHierarchy)
         {
             //Al pulsar la tecla X
-            if (Input.GetButtonUp("Fire1"))
+            if (Input.GetKeyUp(KeyCode.Q))
             {
                 //Si el diálogo no ha empezado ahora mismo
                 if (!justStarted)

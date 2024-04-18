@@ -6,10 +6,20 @@ public class FliyingEnemyController : MonoBehaviour
 {
      //Array de puntos por los que se mueve el enemigo
     public Transform[] points;
+    
     //Velocidad de movimiento del enemigo
     public float moveSpeed;
     //Variable para conocer el punto del recorrido en el que se encuentra el enemigo
     public int currentPoint;
+
+    public bool HalconLobo;
+    public bool Cocatriz;
+    public bool Fantasma;
+    public bool Zombi1;
+
+
+
+
 
     //Distancia del jugador para poder atacar, velocidad de persecuci�n
     public float distanceToAttackPlayer, chaseSpeed;
@@ -101,6 +111,11 @@ public class FliyingEnemyController : MonoBehaviour
                     //Dejamos al enemigo mirando a la izquierda
                     _sR.flipX = false;
 
+                if (Zombi1)
+                    AudioManager.audioMReference.PlaySFX(12);
+                if (HalconLobo)
+                    AudioManager.audioMReference.PlaySFX(13);
+
                 //Si el enemigo ha llegado pr�cticamente a la posici�n objetivo del ataque
                 if (Vector3.Distance(transform.position, attackTarget) <= 0.1f)
                 {
@@ -112,4 +127,5 @@ public class FliyingEnemyController : MonoBehaviour
             }
         }
     }
+
 }
