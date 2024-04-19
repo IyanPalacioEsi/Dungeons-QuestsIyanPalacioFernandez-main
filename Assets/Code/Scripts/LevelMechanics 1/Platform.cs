@@ -9,11 +9,20 @@ public class Platform : MonoBehaviour
     //Variable que nos permite usar bajar de la plataforma si estamos sobre ella
     public bool _onPlatform = false;
 
+    public bool FallPlatform;
+    private Rigidbody2D fallingPlat;
+    Vector2 position;
+    private bool IsFall;
+
+
     // Start is called before the first frame update
     void Start()
     {
         //Inicializamos el collider de la plataforma
         _platformCollider = GetComponent<EdgeCollider2D>();
+
+        fallingPlat = GetComponent<Rigidbody2D>();
+        position = transform.position;
     }
 
     // Update is called once per frame
@@ -25,8 +34,18 @@ public class Platform : MonoBehaviour
             //Llamamos a la corrutina que activa y desactiva la plataforma
             StartCoroutine(ActDeactPlatformCo());
         }
+        if (IsFall)
+        {
+            StartCoroutine(FallPlatformMetodo());
+        }
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (FallPlatform)
+        {
+            IsFall = true;
+        }
+    }
     //Mientras un collider esté tocando al de este objeto
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -54,5 +73,16 @@ public class Platform : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         //Activamos el componente collider
         _platformCollider.enabled = true;
+    }
+
+    IEnumerator FallPlatformMetodo()
+    {
+        yield return new WaitForSeconds(1f);
+        fallingPlat.velocity = new Vector2(0, -5f);
+        yield return new WaitForSeconds(4f);
+        fallingPlat.velocity = new Vector2(0, 0);
+        transform.position = position;
+        IsFall = false;
+        
     }
 }

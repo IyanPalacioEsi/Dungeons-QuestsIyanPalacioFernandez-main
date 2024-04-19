@@ -115,6 +115,10 @@ public class FliyingEnemyController : MonoBehaviour
                     AudioManager.audioMReference.PlaySFX(12);
                 if (HalconLobo)
                     AudioManager.audioMReference.PlaySFX(13);
+                if (Cocatriz)
+                    AudioManager.audioMReference.PlaySFX(14);
+                if (Fantasma)
+                    AudioManager.audioMReference.PlaySFX(15);
 
                 //Si el enemigo ha llegado pr�cticamente a la posici�n objetivo del ataque
                 if (Vector3.Distance(transform.position, attackTarget) <= 0.1f)
