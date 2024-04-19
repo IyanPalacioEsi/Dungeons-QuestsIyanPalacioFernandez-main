@@ -41,6 +41,7 @@ public class Switch : MonoBehaviour
                 //Activamos el objeto
                 objetToSwitch.GetComponent<ObjectActivator>().isActive = true;
                 _sR.sprite = upSprite;
+                AudioManager.audioMReference.PlaySFX(17);
             }
 
             //Si el objeto si estaba activado

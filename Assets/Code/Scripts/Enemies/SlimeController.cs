@@ -85,6 +85,7 @@ public class SlimeController : MonoBehaviour
 
             //Animación de movimiento del enemigo
             _anim.SetBool("isMoving", true);
+            AudioManager.audioMReference.PlaySFX(16);
         }
         //Si por el contrario el contador de tiempo de espera está lleno
         else if (_waitCount > 0)
