@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class DialogActivator : MonoBehaviour
 {
-    //Líneas del diálogo
+    //Lï¿½neas del diï¿½logo
     public string[] lines;
-    //Para saber si el diálogo se puede activar o no
+    //Para saber si el diï¿½logo se puede activar o no
     private bool canActivate;
-    //Sprite de diálogo del NPC
+    //Sprite de diï¿½logo del NPC
     public Sprite theNpcSprite;
+
+    public bool NPC;
+    public bool Cinematic;
 
     // Start is called before the first frame update
     void Start()
@@ -20,22 +23,27 @@ public class DialogActivator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Si el jugador puede activar el diálogo y presiona el botón de interacción y la caja de diálogo no está activa en la jerarquía
-        if (canActivate && Input.GetKeyDown(KeyCode.Q) && !DialogManager.instance.dialogBox.activeInHierarchy)
+        if (NPC) 
         {
-            //Llamamos al método que muestra el diálogo y le pasamos las líneas concretas que contiene este objeto
+            //Si el jugador puede activar el diï¿½logo y presiona el botï¿½n de interacciï¿½n y la caja de diï¿½logo no estï¿½ activa en la jerarquï¿½a
+         if (canActivate && Input.GetKeyDown(KeyCode.Q) && !DialogManager.instance.dialogBox.activeInHierarchy)
+         {
+            //Llamamos al mï¿½todo que muestra el diï¿½logo y le pasamos las lï¿½neas concretas que contiene este objeto
             DialogManager.instance.ShowDialog(lines, theNpcSprite);
+         }
+
         }
+        
     }
 
-    //Si el jugador entra en la zona de Trigger puede activar el diálogo
+    //Si el jugador entra en la zona de Trigger puede activar el diï¿½logo
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
             canActivate = true;
     }
 
-    //Si el jugador sale de la zona de Trigger ya no puede activar le diálogo
+    //Si el jugador sale de la zona de Trigger ya no puede activar le diï¿½logo
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

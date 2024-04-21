@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     //Creamos un array donde guardamos los sonidos a reproducir
     public AudioSource[] soundEffects;
     //Referencias a la musica del juego
-    public AudioSource bgm, levelEndMusic, boosMusic;
+    public AudioSource bgm, levelEndMusic, bossMusic;
 
 
     //Hacemos el Singleton de este script
@@ -16,20 +16,29 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        //Si la referencia del Singleton esta vacía
+        //Si la referencia del Singleton esta vacï¿½a
         if (audioMReference == null)
-            //La rrellenamos con todo el contenido de este código (para que todo sea accesible)
+            //La rrellenamos con todo el contenido de este cï¿½digo (para que todo sea accesible)
             audioMReference = this;
     }
 
-    //Método para reproducir los sonidos
-    public void PlaySFX(int soundToPlay) //soundToPlay = sera el sonido número X del array que queremos reproducir
+    //Mï¿½todo para reproducir los sonidos
+    public void PlaySFX(int soundToPlay) //soundToPlay = sera el sonido nï¿½mero X del array que queremos reproducir
     {
         //Si ya estaba reproduciendo el sonido, lo paramos
         soundEffects[soundToPlay].Stop();
         //Alteramos un poco el sonido cada vez que vaya
         soundEffects[soundToPlay].pitch = Random.Range(.9f, 1.1f);
-        //Reproducir el sonido pasado por parámetro
+        //Reproducir el sonido pasado por parï¿½metro
         soundEffects[soundToPlay].Play();
+    }
+
+     //Mï¿½todo para reproducir la mï¿½sica del Boss Final
+    public void PlayBossMusic()
+    {
+        //Paramos la mï¿½sica de fondo
+        bgm.Stop();
+        //Reproducimos la mï¿½sica del jefes
+        bossMusic.Play();
     }
 }
