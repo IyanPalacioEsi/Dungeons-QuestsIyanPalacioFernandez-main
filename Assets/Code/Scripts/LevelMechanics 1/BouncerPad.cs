@@ -26,7 +26,7 @@ public class BouncerPad : MonoBehaviour
             //Hacemos que el jugador rebote
             collision.GetComponent<PlayerController>().Bounce(bounceForce);
             //Activamos el Trigger de la animación
-            _anim.SetTrigger("Bounce");
+            
         }
     }
 }
