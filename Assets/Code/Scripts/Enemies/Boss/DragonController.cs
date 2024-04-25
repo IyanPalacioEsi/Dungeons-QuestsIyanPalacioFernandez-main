@@ -45,7 +45,7 @@ public class DragonController : MonoBehaviour
     //Vida del enemigo
     public int health = 3;
     //Referencia al efecto de explosión del enemigo y a los objetos que aparecerán tras su muerte
-    public GameObject explosion;
+    public GameObject explosion, winPlatform;
     //Variable para conocer si el enemigo ha sido derrotado
     private bool _isDefeated;
 
@@ -54,12 +54,16 @@ public class DragonController : MonoBehaviour
     public Transform theBoss;
     //Referencia al Animator del jefe final
     private Animator _bAnim;
+    //Referencia al AudioManager
+    private AudioManager _aM;
 
     // Start is called before the first frame update
     void Start()
     {
         //Inicializamos el Animator del jefe final
         _bAnim = GetComponentInChildren<Animator>();
+        //Inicializamos el AudioManager
+        _aM = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         //Inicializamos el estado en el que empieza el jefe final
         currentState = bossStates.shooting;//currentState = bossStates.shooting <=> currentState = 0
     }
@@ -109,6 +113,10 @@ public class DragonController : MonoBehaviour
                             theBoss.gameObject.SetActive(false);
                             //Instanciamos el efecto de explosión
                             Instantiate(explosion, theBoss.position, theBoss.rotation);
+                            //Activamos los objetos tras derrotar al jefe final
+                            winPlatform.SetActive(true);
+                            //Llamamos al método que restaura la música del juego
+                            _aM.StopBossMusic();
                             //El enemigo pasa al estado de muerte
                             currentState = bossStates.ended;
                         }

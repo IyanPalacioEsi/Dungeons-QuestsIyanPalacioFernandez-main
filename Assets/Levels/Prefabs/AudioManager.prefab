@@ -704,7 +704,7 @@ MonoBehaviour:
   - {fileID: 7627654065639696968}
   - {fileID: 8584858067893122486}
   - {fileID: 8617775491458642451}
-  - {fileID: 0}
+  - {fileID: 2193529008619117387}
   bgm: {fileID: 6035108376369480844}
   levelEndMusic: {fileID: 0}
   bossMusic: {fileID: 0}

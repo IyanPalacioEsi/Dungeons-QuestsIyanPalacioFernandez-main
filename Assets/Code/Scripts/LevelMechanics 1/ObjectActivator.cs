@@ -9,11 +9,11 @@ public class ObjectActivator : MonoBehaviour
     //En este caso este m�todo activa el objeto
     public void ActivateObjet()
     {
-        GetComponent<Animator>().SetTrigger("Activate");
+        
     }
     //En este caso este m�todo desactiva el objeto
     public void DeactivateObjet()
     {
-        GetComponent<Animator>().SetTrigger("Deactivate");
+        
     }
 }
