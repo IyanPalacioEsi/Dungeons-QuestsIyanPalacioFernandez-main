@@ -121,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "Efecto_Recoleccio\u0301n_ (1)_0"
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1478
+        width: 591
+        height: 821
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8258f2198fa724b8edd8353ca911a3
+      internalID: -1883776858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Efecto_Recoleccio\u0301n_ (1)_1"
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1439
+        width: 957
+        height: 933
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2387e4ed10bc5498050b0e0b6f5e0c
+      internalID: 258524329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Efecto_Recoleccio\u0301n_ (1)_2"
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 1419
+        width: 926
+        height: 959
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6ed4ddd3fb7324d8d609cd48623eb8
+      internalID: 1416144075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Efecto_Recoleccio\u0301n_ (1)_3"
+      rect:
+        serializedVersion: 2
+        x: 2844
+        y: 1401
+        width: 1072
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b4d197f26993e4caff60b4d5ba0c20
+      internalID: -46640104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +216,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Efecto_Recoleccio\u0301n_ (1)_0": -1883776858
+      "Efecto_Recoleccio\u0301n_ (1)_1": 258524329
+      "Efecto_Recoleccio\u0301n_ (1)_2": 1416144075
+      "Efecto_Recoleccio\u0301n_ (1)_3": -46640104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

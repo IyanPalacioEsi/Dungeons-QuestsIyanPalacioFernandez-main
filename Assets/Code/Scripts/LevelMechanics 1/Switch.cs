@@ -30,31 +30,7 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Si pulsamos el bot�n E y el jugador puede interactuar
-        if (Input.GetKeyDown(KeyCode.E) && _pC.canInteract)
-        {
-            //Si el objeto est� desactivado
-            if(objetToSwitch.GetComponent<ObjectActivator>().isActive == false)
-            {
-                //Hacemos en este caso la animaci�n del objeto sobre el que queremos que interact�e
-                objetToSwitch.GetComponent<ObjectActivator>().ActivateObjet();
-                //Activamos el objeto
-                objetToSwitch.GetComponent<ObjectActivator>().isActive = true;
-                _sR.sprite = upSprite;
-                AudioManager.audioMReference.PlaySFX(17);
-            }
-
-            //Si el objeto si estaba activado
-            else
-            {
-                //Hacemos en este caso la animaci�n del objeto sobre el que queremos que interact�e
-                objetToSwitch.GetComponent<ObjectActivator>().DeactivateObjet();
-                //Desactivamos el objeto
-                objetToSwitch.GetComponent<ObjectActivator>().isActive = false;
-                _sR.sprite = downSprite;
-            }
-                
-        }
+        
     }
 
     //M�todo para conocer cuando un objeto entra en la zona de Trigger
@@ -79,6 +55,37 @@ public class Switch : MonoBehaviour
             infoPanel.SetActive(false);
             //No permitimos al jugador que pueda interactuar con el objeto
             collision.GetComponent<PlayerController>().canInteract = false;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        // Si pulsamos el bot�n E y el jugador puede interactuar
+        if (Input.GetKeyDown(KeyCode.E) && _pC.canInteract)
+        {
+            
+            //Si el objeto est� desactivado
+            if (objetToSwitch.GetComponent<ObjectActivator>().isActive == false)
+            {
+                //Hacemos en este caso la animaci�n del objeto sobre el que queremos que interact�e
+                objetToSwitch.GetComponent<ObjectActivator>().ActivateObjet();
+                //Activamos el objeto
+                objetToSwitch.GetComponent<ObjectActivator>().isActive = true;
+                _sR.sprite = upSprite;
+                AudioManager.audioMReference.PlaySFX(17);
+                Debug.Log("Llega");
+            }
+
+            //Si el objeto si estaba activado
+            else
+            {
+                //Hacemos en este caso la animaci�n del objeto sobre el que queremos que interact�e
+                objetToSwitch.GetComponent<ObjectActivator>().DeactivateObjet();
+                //Desactivamos el objeto
+                objetToSwitch.GetComponent<ObjectActivator>().isActive = false;
+                _sR.sprite = downSprite;
+            }
+
         }
     }
 }

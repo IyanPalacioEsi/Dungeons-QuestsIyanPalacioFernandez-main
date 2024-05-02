@@ -121,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "Efecto_Muerte_Drago\u0301n__0"
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1768
+        width: 373
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b203334fb86c14e87c01565fa3a124
+      internalID: -1359524425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Efecto_Muerte_Drago\u0301n__1"
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1702
+        width: 684
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ebab92e95eb9047b113fc68ff505a4
+      internalID: -1333864453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Efecto_Muerte_Drago\u0301n__2"
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 1702
+        width: 614
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162dcaacb9056be4185d68ba692dd514
+      internalID: -350711323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Efecto_Muerte_Drago\u0301n__3"
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1678
+        width: 632
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ca10d5383dfa142805b8614ecda5eb
+      internalID: 763260107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Efecto_Muerte_Drago\u0301n__4"
+      rect:
+        serializedVersion: 2
+        x: 2611
+        y: 1664
+        width: 677
+        height: 662
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eda2b72571ec6b41948e557257cd2bc
+      internalID: -2051782935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Efecto_Muerte_Drago\u0301n__5"
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 1662
+        width: 666
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83da26f866f57c44b617aba8b7752af
+      internalID: -11713123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +258,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Efecto_Muerte_Drago\u0301n__0": -1359524425
+      "Efecto_Muerte_Drago\u0301n__1": -1333864453
+      "Efecto_Muerte_Drago\u0301n__2": -350711323
+      "Efecto_Muerte_Drago\u0301n__3": 763260107
+      "Efecto_Muerte_Drago\u0301n__4": -2051782935
+      "Efecto_Muerte_Drago\u0301n__5": -11713123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
