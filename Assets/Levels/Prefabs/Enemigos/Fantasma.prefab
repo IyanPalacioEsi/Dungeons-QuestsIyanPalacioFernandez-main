@@ -216,7 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5728164051572768000}
   - component: {fileID: 6679424760395909}
-  - component: {fileID: 9211750766610629699}
+  - component: {fileID: 3830038627959588588}
   m_Layer: 0
   m_Name: Fantasma1
   m_TagString: Enemy
@@ -291,8 +291,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &9211750766610629699
-BoxCollider2D:
+--- !u!70 &3830038627959588588
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -323,19 +323,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06890869, y: -0.18471098}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
-    newSize: {x: 5, y: 5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0246582, y: 3.2106333}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.06417847, y: -0.1860547}
+  m_Size: {x: 0.94525146, y: 3.242114}
+  m_Direction: 0
 --- !u!1 &7119626004275548461
 GameObject:
   m_ObjectHideFlags: 0

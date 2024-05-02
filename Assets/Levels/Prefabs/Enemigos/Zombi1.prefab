@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8567367687182267041}
   - component: {fileID: 4913504531078882461}
-  - component: {fileID: 5529893060277747452}
+  - component: {fileID: 1483362450713006633}
   m_Layer: 0
   m_Name: Zombi
   m_TagString: Enemy
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5529893060277747452
-BoxCollider2D:
+--- !u!70 &1483362450713006633
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,19 +117,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0006713867, y: -0.260262}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
-    newSize: {x: 5, y: 5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8342285, y: 2.5988426}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.008911133, y: -0.21761143}
+  m_Size: {x: 0.6335449, y: 2.6442912}
+  m_Direction: 0
 --- !u!1 &5297459824007450693
 GameObject:
   m_ObjectHideFlags: 0

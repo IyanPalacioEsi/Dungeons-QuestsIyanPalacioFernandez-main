@@ -16,7 +16,7 @@ public class Switch : MonoBehaviour
     private SpriteRenderer _sR;
     //Referencia al PlayerController
     private PlayerController _pC;
-    public bool canInteract;
+    
 
     // Start is called before the first frame update
     void Start()
