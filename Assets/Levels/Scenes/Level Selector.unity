@@ -2499,6 +2499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LSPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 145189403274693456, guid: 53e3c0bc843ebf045beefa7cb8cb3d5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2009473059750816625, guid: 53e3c0bc843ebf045beefa7cb8cb3d5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5
