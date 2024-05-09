@@ -15,6 +15,7 @@ TagManager:
   - UI
   - Ground
   - Platform
+  - Grid
   - 
   - 
   - 
@@ -37,8 +38,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Minimapa
   m_SortingLayers:
   - name: Background
     uniqueID: 3814430847

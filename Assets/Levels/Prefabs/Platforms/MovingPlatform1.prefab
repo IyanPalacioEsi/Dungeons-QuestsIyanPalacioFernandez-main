@@ -81,7 +81,7 @@ MonoBehaviour:
   points:
   - {fileID: 4018393335542176938}
   - {fileID: 4030840408339041574}
-  moveSpeed: 3
+  moveSpeed: 5
   currentPoint: 0
   _platformPosition: {fileID: 7918433219329168798}
 --- !u!1 &8192743389642788498
