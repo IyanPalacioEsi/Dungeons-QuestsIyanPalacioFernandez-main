@@ -286,6 +286,9 @@ MonoBehaviour:
   - {fileID: 7822751040063752146}
   moveSpeed: 2
   currentPoint: 0
+  stopInput: 0
+  knockBackForce: 0
+  knockBackLength: 0
   HalconLobo: 0
   Cocatriz: 0
   Fantasma: 0
@@ -305,10 +308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed421ace9ea014f40a9cae3ff115b956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 1
   currentHealth: 3
   deathEffect: {fileID: 1225309178902297599, guid: 038710ea315f97042b8c203e9206e815, type: 3}
-  knockBackForce: 11
 --- !u!50 &5910142174469330913
 Rigidbody2D:
   serializedVersion: 4

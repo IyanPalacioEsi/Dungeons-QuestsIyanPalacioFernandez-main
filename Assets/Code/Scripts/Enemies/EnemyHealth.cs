@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour
 
     public GameObject deathEffect;
 
-    public float knockBackForce;
+    
 
     private Rigidbody2D _theRB;
 
@@ -22,17 +22,19 @@ public class EnemyHealth : MonoBehaviour
         //GetComponent => Va al objeto donde est� metido este c�digo y busca el componente indicado
         _theRB = GetComponent<Rigidbody2D>();
 
+        
     }
 
     //Llamar a esta funcion cada vez que el enemigo tenga que recibir daño
 
     public void TakeDamage()
     {
+        Debug.Log("Maldito");
         //Cada golpe que recibe tiene que restar 1 a su vida actual
         currentHealth--;
         //Si se queda sin vida, se muere :(
 
-        Knockback();
+        
 
         if(currentHealth <= 0)
         {
@@ -44,11 +46,5 @@ public class EnemyHealth : MonoBehaviour
             AudioManager.audioMReference.PlaySFX(3);
         }
     }
-    public void Knockback()
-    {
-        //Paralizamos al jugador en X y hacemos que salte en Y
-        _theRB.velocity = new Vector2( knockBackForce, 0f);
-        //Cambiamos el valor del par�metro del Animator "hurt"
-        //_anim.SetTrigger("Hurt");
-    }
+  
 }

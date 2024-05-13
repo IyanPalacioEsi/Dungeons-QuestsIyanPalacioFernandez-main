@@ -178,7 +178,7 @@ MonoBehaviour:
   maxHealth: 1
   currentHealth: 3
   deathEffect: {fileID: 1225309178902297599, guid: 038710ea315f97042b8c203e9206e815, type: 3}
-  knockBackForce: 11
+  knockBackForce: 8
 --- !u!50 &3373214189221214666
 Rigidbody2D:
   serializedVersion: 4
