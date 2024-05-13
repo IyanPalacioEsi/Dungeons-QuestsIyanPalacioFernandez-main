@@ -19,7 +19,7 @@ public class FliyingEnemyController : MonoBehaviour
     public float knockBackForce;
     //Variables para controlar el contador de tiempo de Knocback
     public float knockBackLength; //Variable que nos sirve para rellenar el contador
-    private float _knockBackCounter; //Contador de tiempo
+    private float _knockBackCounter ; //Contador de tiempo
 
 
 
@@ -72,7 +72,82 @@ public class FliyingEnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Si el contador de tiempo entre ataques a�n est� lleno
+        if (_attackCounter > 0)
+            //Hacemos que se vac�e el contador
+            _attackCounter -= Time.deltaTime;
+        //Si el contador de tiempo entre ataques ya est� vac�o
+        else
+        {
+            //Si la distancia entre el jugador y el enemigo es suficientemente grande
+            if (Vector3.Distance(transform.position, _player.transform.position) > distanceToAttackPlayer)
+            {
+                //Reiniciamos el objetivo del ataque
+                attackTarget = Vector3.zero;
+
+                //Movemos al enemigo
+                transform.position = Vector3.MoveTowards(transform.position, points[currentPoint].position, moveSpeed * Time.deltaTime);
+
+                //Si el enemigo pr�cticamente ha llegado a su punto de destino
+                if (Vector3.Distance(transform.position, points[currentPoint].position) < 0.01f)
+                {
+                    //Pasamos al siguiente punto
+                    currentPoint++;
+
+                    //Comprobamos si hemos llegado al �ltimo punto del array
+                    if (currentPoint >= points.Length)
+                        //Reseteamos al primer punto del array
+                        currentPoint = 0;
+                }
+
+                //Si el enemigo ha llegado al punto m�s a la izquierda
+                if (transform.position.x < points[currentPoint].position.x)
+                    //Rotamos al enemigo para que mire en direcci�n contraria
+                    _sR.flipX = true;
+                //Si el enemigo ha llegado al punto m�s a la derecha
+                else if (transform.position.x > points[currentPoint].position.x)
+                    //Dejamos al enemigo mirando a la izquierda
+                    _sR.flipX = false;
+            }
+            //Si por el contrario el jugador est� lo suficientemente cerca como para ser atacado
+            else
+            {
+                //Si el objetivo del ataque est� vac�o
+                if (attackTarget == Vector3.zero)
+                    //El objetivo del ataque ser� el jugador
+                    attackTarget = _player.transform.position;
+
+                //Movemos al enemigo hacia donde est� el jugador
+                transform.position = Vector3.MoveTowards(transform.position, attackTarget, chaseSpeed * Time.deltaTime);
+
+                //Si el enemigo est� a la izquierda del punto al que tiene que ir
+                if (transform.position.x < attackTarget.x)
+                    //Rotamos al enemigo para que mire en direcci�n contraria
+                    _sR.flipX = true;
+                //Si el enemigo est� a la derecha del punto al que tiene que ir
+                else if (transform.position.x > attackTarget.x)
+                    //Dejamos al enemigo mirando a la izquierda
+                    _sR.flipX = false;
+
+                if (Zombi1)
+                    AudioManager.audioMReference.PlaySFX(12);
+                if (HalconLobo)
+                    AudioManager.audioMReference.PlaySFX(13);
+                if (Cocatriz)
+                    AudioManager.audioMReference.PlaySFX(14);
+                if (Fantasma)
+                    AudioManager.audioMReference.PlaySFX(15);
+
+                //Si el enemigo ha llegado pr�cticamente a la posici�n objetivo del ataque
+                if (Vector3.Distance(transform.position, attackTarget) <= 0.1f)
+                {
+                    //Inicializamos el contador de tiempo entre ataques
+                    _attackCounter = waitAfterAttack;
+                    //Reiniciamos el objtivo del ataque
+                    attackTarget = Vector3.zero;
+                }
+            }
+        }
 
         //Si no funciona el movimiento. Tampoco si el jugador está parado
         if (!stopInput)
@@ -80,85 +155,10 @@ public class FliyingEnemyController : MonoBehaviour
             //Si el contador de KnockBack se ha vaciado, el jugador recupera el control del movimiento
             if (_knockBackCounter <= 0)
             {
-                //Si el contador de tiempo entre ataques a�n est� lleno
-                if (_attackCounter > 0)
-                    //Hacemos que se vac�e el contador
-                    _attackCounter -= Time.deltaTime;
-                //Si el contador de tiempo entre ataques ya est� vac�o
-                else
-                {
-                    //Si la distancia entre el jugador y el enemigo es suficientemente grande
-                    if (Vector3.Distance(transform.position, _player.transform.position) > distanceToAttackPlayer)
-                    {
-                        //Reiniciamos el objetivo del ataque
-                        attackTarget = Vector3.zero;
+                
 
-                        //Movemos al enemigo
-                        transform.position = Vector3.MoveTowards(transform.position, points[currentPoint].position, moveSpeed * Time.deltaTime);
-
-                        //Si el enemigo pr�cticamente ha llegado a su punto de destino
-                        if (Vector3.Distance(transform.position, points[currentPoint].position) < 0.01f)
-                        {
-                            //Pasamos al siguiente punto
-                            currentPoint++;
-
-                            //Comprobamos si hemos llegado al �ltimo punto del array
-                            if (currentPoint >= points.Length)
-                                //Reseteamos al primer punto del array
-                                currentPoint = 0;
-                        }
-
-                        //Si el enemigo ha llegado al punto m�s a la izquierda
-                        if (transform.position.x < points[currentPoint].position.x)
-                            //Rotamos al enemigo para que mire en direcci�n contraria
-                            _sR.flipX = true;
-                        //Si el enemigo ha llegado al punto m�s a la derecha
-                        else if (transform.position.x > points[currentPoint].position.x)
-                            //Dejamos al enemigo mirando a la izquierda
-                            _sR.flipX = false;
-                    }
-                    //Si por el contrario el jugador est� lo suficientemente cerca como para ser atacado
-                    else
-                    {
-                        //Si el objetivo del ataque est� vac�o
-                        if (attackTarget == Vector3.zero)
-                            //El objetivo del ataque ser� el jugador
-                            attackTarget = _player.transform.position;
-
-                        //Movemos al enemigo hacia donde est� el jugador
-                        transform.position = Vector3.MoveTowards(transform.position, attackTarget, chaseSpeed * Time.deltaTime);
-
-                        //Si el enemigo est� a la izquierda del punto al que tiene que ir
-                        if (transform.position.x < attackTarget.x)
-                            //Rotamos al enemigo para que mire en direcci�n contraria
-                            _sR.flipX = true;
-                        //Si el enemigo est� a la derecha del punto al que tiene que ir
-                        else if (transform.position.x > attackTarget.x)
-                            //Dejamos al enemigo mirando a la izquierda
-                            _sR.flipX = false;
-
-                        if (Zombi1)
-                            AudioManager.audioMReference.PlaySFX(12);
-                        if (HalconLobo)
-                            AudioManager.audioMReference.PlaySFX(13);
-                        if (Cocatriz)
-                            AudioManager.audioMReference.PlaySFX(14);
-                        if (Fantasma)
-                            AudioManager.audioMReference.PlaySFX(15);
-
-                        //Si el enemigo ha llegado pr�cticamente a la posici�n objetivo del ataque
-                        if (Vector3.Distance(transform.position, attackTarget) <= 0.1f)
-                        {
-                            //Inicializamos el contador de tiempo entre ataques
-                            _attackCounter = waitAfterAttack;
-                            //Reiniciamos el objtivo del ataque
-                            attackTarget = Vector3.zero;
-                        }
-                    }
-                }
-
-
-
+                
+               
             }
             //Si por el contrario el contador de KnockBack todavía no está vacío
             else
