@@ -12,6 +12,8 @@ public class FliyingEnemyController : MonoBehaviour
     //Variable para conocer el punto del recorrido en el que se encuentra el enemigo
     public int currentPoint;
 
+   
+
     //Variable para detener al jugador
     public bool stopInput;
 
@@ -72,6 +74,9 @@ public class FliyingEnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+
         //Si el contador de tiempo entre ataques a�n est� lleno
         if (_attackCounter > 0)
             //Hacemos que se vac�e el contador

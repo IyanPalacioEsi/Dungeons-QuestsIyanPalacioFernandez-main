@@ -146,6 +146,9 @@ MonoBehaviour:
   - {fileID: 4206932668569869679}
   moveSpeed: 9
   currentPoint: 0
+  stopInput: 0
+  knockBackForce: 0
+  knockBackLength: 0
   HalconLobo: 0
   Cocatriz: 1
   Fantasma: 0
@@ -201,7 +204,6 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 3
   deathEffect: {fileID: 1225309178902297599, guid: 038710ea315f97042b8c203e9206e815, type: 3}
-  knockBackForce: 11
 --- !u!58 &6469359971823595029
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -234,9 +236,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5527954, y: -0.5063495}
+  m_Offset: {x: -0.3840866, y: -0.50634956}
   serializedVersion: 2
-  m_Radius: 0.44207764
+  m_Radius: 0.9251785
 --- !u!1 &7894318490711064452
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +356,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.27261353, y: -0.49794102}
+  m_Offset: {x: 0.53102875, y: -0.48240805}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -365,5 +367,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.9934692, y: 2.0135193}
+  m_Size: {x: 4.5102997, y: 2.1549325}
   m_EdgeRadius: 0
