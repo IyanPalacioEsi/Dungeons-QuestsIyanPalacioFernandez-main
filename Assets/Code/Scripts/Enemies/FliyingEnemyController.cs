@@ -14,14 +14,7 @@ public class FliyingEnemyController : MonoBehaviour
 
    
 
-    //Variable para detener al jugador
-    public bool stopInput;
-
-    //Variable para la fuerza del KnockBack
-    public float knockBackForce;
-    //Variables para controlar el contador de tiempo de Knocback
-    public float knockBackLength; //Variable que nos sirve para rellenar el contador
-    private float _knockBackCounter ; //Contador de tiempo
+    
 
 
 
@@ -154,41 +147,11 @@ public class FliyingEnemyController : MonoBehaviour
             }
         }
 
-        //Si no funciona el movimiento. Tampoco si el jugador está parado
-        if (!stopInput)
-        {
-            //Si el contador de KnockBack se ha vaciado, el jugador recupera el control del movimiento
-            if (_knockBackCounter <= 0)
-            {
-                
-
-                
-               
-            }
-            //Si por el contrario el contador de KnockBack todavía no está vacío
-            else
-                //Hacemos decrecer el contador en 1 cada segundo
-                _knockBackCounter -= Time.deltaTime;
-        }
+        
 
         
     }
 
-    public void Knockback()
-    {
-        //Inicializamos el contador de KnockBack
-        _knockBackCounter = knockBackLength;
-        //Paralizamos al jugador en X y hacemos que salte en Y
-        _theRB.velocity = new Vector2(0f, knockBackForce);
-        //Si el jugador mira a la izquierda
-        if (!_theSR.flipX)
-            //Aplicamos un pequeño empuje hacia la derecha
-            _theRB.velocity = new Vector2(knockBackForce, _theRB.velocity.y);
-        //Si el jugador mira a la derecha
-        else
-            //Aplicamos un pequeño empuje hacia la izquierda
-            _theRB.velocity = new Vector2(-knockBackForce, _theRB.velocity.y);
-        
-    }
+    
 
 }
