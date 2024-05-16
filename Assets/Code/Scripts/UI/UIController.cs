@@ -14,6 +14,10 @@ public class UIController : MonoBehaviour
     //Referencia al texto de las gemas de la UI
     public TextMeshProUGUI gemText;
 
+
+    //Referencia al texto de completar el nivel
+    public TextMeshProUGUI levelCompleteText;
+
     //Referencia al Script que controla la vida del jugador
     private PlayerHealthController _pHReference;
     //Referencia al LevelManager
