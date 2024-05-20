@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     //Creamos un array donde guardamos los sonidos a reproducir
     public AudioSource[] soundEffects;
     //Referencias a la musica del juego
-    public AudioSource bgm, levelEndMusic, bossMusic;
+    public AudioSource bgm, levelEndMusic, bossMusic, bus;
 
 
     //Hacemos el Singleton de este script
@@ -50,4 +50,14 @@ public class AudioManager : MonoBehaviour
         //Reproducimos la música de fondo
         bgm.Play();
     }
+
+    //Método para la música al acabar un nivel
+    public void LevelEndMusic()
+    {
+        //Paramos la música del nivel
+        bgm.Stop();
+        //Reproducimos la música de ganar el nivel
+        levelEndMusic.Play();
+    }
 }
+
