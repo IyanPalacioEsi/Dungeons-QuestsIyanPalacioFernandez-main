@@ -709,7 +709,7 @@ MonoBehaviour:
   bgm: {fileID: 6035108376369480844}
   levelEndMusic: {fileID: 9199818234849784204}
   bossMusic: {fileID: 9160315498663194813}
-  bus: {fileID: 4282242922551326494}
+  bus: {fileID: 6035108376369480844}
 --- !u!1 &1824370960259706338
 GameObject:
   m_ObjectHideFlags: 0
