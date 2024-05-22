@@ -40,6 +40,14 @@ public class UIController : MonoBehaviour
         _lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         //Inicializamos el contador de gemas
         UpdateGemCount();
+        //Cuando empieza el juego hacemos fundido a transparente
+        FadeFromBlack();
+    }
+
+    private void Update()
+    {
+        //Llamamos al método de fundido
+        FadeUnfade();
     }
 
     //Método para actualizar la vida en la UI
@@ -146,5 +154,6 @@ public class UIController : MonoBehaviour
                 //Paramos de hacer fundido a transparente
                 shouldFadeFromBlack = false;
         }
+
     }
 }
