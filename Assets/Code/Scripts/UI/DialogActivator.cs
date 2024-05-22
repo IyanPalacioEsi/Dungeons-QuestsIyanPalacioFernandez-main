@@ -25,7 +25,7 @@ public class DialogActivator : MonoBehaviour
     {
         
             //Si el jugador puede activar el di�logo y presiona el bot�n de interacci�n y la caja de di�logo no est� activa en la jerarqu�a
-         if (canActivate && Input.GetKeyDown(KeyCode.Q) && !DialogManager.instance.dialogBox.activeInHierarchy)
+         if (canActivate && Input.GetKeyDown(KeyCode.E) && !DialogManager.instance.dialogBox.activeInHierarchy)
          {
             //Llamamos al m�todo que muestra el di�logo y le pasamos las l�neas concretas que contiene este objeto
             DialogManager.instance.ShowDialog(lines, theNpcSprite);
@@ -42,7 +42,7 @@ public class DialogActivator : MonoBehaviour
         {
             if (NPC) 
             {
-                if (canActivate && Input.GetKeyDown(KeyCode.Q) && !DialogManager.instance.dialogBox.activeInHierarchy)
+                if (canActivate && Input.GetKeyDown(KeyCode.E) && !DialogManager.instance.dialogBox.activeInHierarchy)
                 {
                     //Llamamos al m�todo que muestra el di�logo y le pasamos las l�neas concretas que contiene este objeto
                     DialogManager.instance.ShowDialog(lines, theNpcSprite);
