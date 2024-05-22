@@ -13,6 +13,8 @@ public class CreditsFundido : MonoBehaviour
     public float fadeSpeed;
     //Variables para conocer cuando hacemos fundido a negro o vuelta a transparente
     private bool shouldFadeToBlack, shouldFadeFromBlack;
+
+    
     // Start is called before the first frame update
     void Start()
     {
